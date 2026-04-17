@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/img/icone.webp" />
+    <title>Baseflora - Página Oficial</title>
+    <meta name="description" content="Página informativa sobre apresentação digital e bem-estar digestivo.">
+    <meta name="distribution" content="global">
+    <meta name="rating" content="general">
+    <meta name="page-version" content="v3.0.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    <style>
+        @import url('https://fonts.bunny.net/css?family=mulish:400,500,600,700,800&display=swap');
+
+        html {
+          scroll-behavior: smooth;
+        }
+
+        body {
+          font-family: "Mulish", sans-serif;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+        a,
+        a:hover,
+        a:active,
+        a:visited,
+        a:focus {
+          text-decoration: none;
+        }
+
+        .link-acao {
+          cursor: pointer;
+        }
+
+        p .elemento-oculto {
+          display: none;
+        }
+
+        .faixa-topo {
+          background-color: #36BC98;
+        }
+
+        .faixa-topo p {
+          font-size: 17px;
+          font-weight: 400;
+          text-align: center;
+          color: #fff;
+        }
+
+        .principal {
+          background: linear-gradient(126deg, #fff 45%, #36BC98 100%);
+        }
+
+        .info-data h3 {
+          padding: 15px;
+          border: 1px solid #346F93;
+          border-radius: 10px 10px 10px 10px;
+          -moz-border-radius: 10px 10px 10px 10px;
+          -webkit-border-radius: 10px 10px 10px 10px;
+          background: #256488;
+          color: #fff;
+          font-size: 18px;
+          text-align: center;
+          margin: 0 0 35px 0;
+        }
+
+        .form-control {
+          height: 50px;
+          border-radius: 10px;
+        }
+
+        .destaque {
+          background-color: #F0F0F0;
+        }
+
+        .faixa-topo-2 {
+          background-color: #346F93;
+          position: relative;
+        }
+
+        .faixa-topo-2 p {
+          font-size: 38px;
+          font-weight: 700;
+          text-align: center;
+          color: #fff;
+        }
+
+        .triangulo {
+          position: absolute;
+          bottom: -45px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 0;
+          height: 0;
+          border-left: 106px solid transparent;
+          border-right: 106px solid transparent;
+          border-top: 56px solid #346F93;
+        }
+
+        .principal {
+          padding-top: 65px;
+          padding-bottom: 65px;
+        }
+
+        .principal h2 {
+          color: #1F5776;
+          font-weight: 800;
+          font-size: 40px;
+          text-align: center;
+          padding: 0px 50px;
+        }
+
+        .principal h3 {
+          color: #346F93;
+          font-size: 19px;
+          font-weight: 600;
+          text-align: center;
+        }
+
+        .info-data h3 {
+          color: #fff;
+        }
+
+        .principal h4 {
+          color: #346F93;
+          font-size: 28px;
+          font-weight: 600;
+          text-align: center;
+        }
+
+        .principal p {
+          color: #53595E;
+          font-size: 14px;
+          font-weight: 500;
+        }
+
+        button.botao-cta,
+        a.botao-cta {
+          background: #59B851;
+          border: none;
+          clear: both;
+          width: 75%;
+          display: block;
+          text-align: center;
+          text-decoration: none;
+          font-size: 20px;
+          color: #ffffff;
+          font-weight: 600;
+          padding: 20px 0;
+          border-radius: 15px 15px 15px 15px;
+          -moz-border-radius: 15px 15px 15px 15px;
+          -webkit-border-radius: 15px 15px 15px 15px;
+        }
+
+        .tag-palestra {
+          color: #346F93;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #36bc983d;
+          border-radius: 14px;
+          width: 300px;
+          margin: 0 auto 20px auto;
+          padding: 2px 8px;
+        }
+
+        .tag-palestra p {
+          color: #346F93;
+          font-size: 14px;
+          margin-bottom: 0;
+          font-weight: 600;
+        }
+
+        .divisor {
+          width: 330px;
+          height: 3px;
+          border-radius: 10px;
+          background-color: #36BC98;
+          margin: 20px auto;
+        }
+
+        .elemento-lista {
+          display: flex;
+          align-items: baseline;
+          gap: 10px;
+          box-shadow: 0px 11px 30px 0px #00000041;
+          border: 1px solid #36BC9880;
+          border-radius: 13px;
+          padding: 10px;
+          background-color: #fff;
+        }
+
+        .lista-banner {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 100%;
+        }
+
+        .elemento-lista svg {
+          flex-shrink: 0;
+          margin-top: 4px;
+        }
+
+        .elemento-lista p {
+          margin: 0;
+          line-height: 1.6;
+        }
+
+        .agendamento {
+          gap: 18px;
+          box-shadow: 0px 11px 30px 0px #00000041;
+          border: 1px solid #36BC9880;
+          border-radius: 13px;
+          padding: 20px;
+          max-width: 545px;
+          width: 100%;
+          margin: 20px auto 0 auto;
+          background-color: #fff;
+        }
+
+        .calendario,
+        .horario {
+          gap: 10px;
+          align-items: center;
+        }
+
+        .detalhe-evento h4 {
+          color: #191919 !important;
+          font-size: 21px !important;
+          font-weight: 700 !important;
+          margin-bottom: 0 !important;
+        }
+
+        .calendario p,
+        .horario p {
+          font-size: 18px !important;
+          text-align: center;
+          font-weight: 600 !important;
+          margin: 10px auto;
+          color: #000 !important;
+        }
+
+        .agendamento svg {
+          width: 45px;
+          height: 45px;
+          flex-shrink: 0;
+        }
+
+        .agendamento svg path {
+          color: #000;
+        }
+
+        .link-cta {
+          width: fit-content;
+          display: block;
+          margin: 0 auto;
+        }
+
+        .btn-grupo-acao {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 240px;
+          height: 56px;
+          padding: 20px 30px;
+          gap: 5px;
+          border-radius: 5px;
+          background-color: #36BC98;
+          font-weight: 500;
+          font-size: 15px;
+          text-transform: uppercase;
+          color: #fff;
+          transition: .3s;
+          animation: btnPulse 1.8s infinite;
+        }
+
+        @keyframes btnPulse {
+          0% {
+            transform: scale(1);
+            box-shadow: 0 0 0 0 rgba(54, 188, 152, 0.7);
+          }
+          70% {
+            transform: scale(1.05);
+            box-shadow: 0 0 0 15px rgba(54, 188, 152, 0);
+          }
+          100% {
+            transform: scale(1);
+            box-shadow: 0 0 0 0 rgba(54, 188, 152, 0);
+          }
+        }
+
+        .btn-grupo-acao:hover {
+          filter: brightness(1.1);
+          transition: .3s;
+        }
+
+        .btn-grupo-acao svg {
+          transition: 300ms;
+        }
+
+        .btn-grupo-acao:hover svg {
+          transform: rotate(90deg);
+          transition: 300ms;
+        }
+
+        .vagas-disponiveis {
+          background: #36BC9833;
+          border: 1px solid #36BC98;
+          border-radius: 10px;
+          padding: 25px;
+          margin-top: 20px;
+        }
+
+        .vagas-disponiveis h3 {
+          color: #346F93;
+          font-size: 30px;
+          font-weight: 700;
+          text-align: center;
+        }
+
+        .vagas-disponiveis h4 {
+          color: #346F93;
+          font-size: 25px;
+          font-weight: 400;
+          text-align: center;
+        }
+
+        .contagem-regressiva {
+          background-color: #36BC98;
+        }
+
+        .contagem-regressiva h2 {
+          color: #fff;
+          font-size: 40px;
+          font-weight: 700;
+          text-align: center;
+        }
+
+        .contagem-regressiva p {
+          color: #fff;
+          font-size: 25px;
+          font-weight: 400;
+          text-align: center;
+        }
+
+        .caixa-destaque {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 0 25px;
+          width: 100%;
+          height: 215px;
+          border-radius: 13px;
+          gap: 10px;
+          box-shadow: 0px 11px 20.7px 0px #00000041;
+          background: #36BC98;
+          border: 1px solid #36BC9880;
+        }
+
+        .caixa-destaque p {
+          color: #fff;
+          font-size: 15px;
+          font-weight: 500;
+          text-align: center;
+        }
+
+        .ao-vivo {
+          background-color: #346F93;
+        }
+
+        .ao-vivo p {
+          color: #fff;
+          font-size: 16px;
+          font-weight: 700;
+          text-align: end;
+        }
+
+        .sobre-evento h2 {
+          color: #346F93;
+          font-size: 39px;
+          font-weight: 700;
+          text-align: center;
+        }
+
+        .card-titulo {
+          color: #36BC98;
+          font-size: 20px;
+          font-weight: 600;
+        }
+
+        .subtitulo-secao {
+          color: #346F93;
+          font-size: 25px;
+          font-weight: 600;
+          text-align: center;
+        }
+
+        .card-beneficio {
+          border: 1px solid #36BC9880;
+          box-shadow: 0px 4px 47px 0px #00000027;
+          background-color: #FAFAFA;
+          max-width: 350px;
+          width: 100%;
+          height: 380px;
+          border-radius: 8px;
+          padding: 30px;
+        }
+
+        .ultimo-card {
+          margin: 0 auto;
+          max-width: 635px;
+          height: 230px;
+        }
+
+        .icone-fundo {
+          background-color: #DAEAE6;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          padding: 5px;
+          border-radius: 10px;
+          margin-bottom: 10px;
+        }
+
+        .card-descricao {
+          color: #346F93;
+          font-size: 16px;
+          font-weight: 500;
+        }
+
+        .cronometro {
+          display: flex;
+          gap: 10px;
+        }
+
+        .caixa-cronometro {
+          background-color: #fff;
+          color: #36BC98;
+          padding: 0px;
+          text-align: center;
+          border-radius: 6px;
+          max-width: 265px;
+          width: 265px;
+          height: 186px;
+          line-height: 50px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .caixa-cronometro span {
+          display: block;
+          font-size: 79px;
+          font-weight: 700;
+          text-align: center;
+        }
+
+        .legenda-tempo {
+          font-size: 29px;
+          font-weight: 700;
+          text-align: center;
+        }
+
+        .sobre-evento h4 {
+          color: #000;
+          font-size: 18px;
+          font-weight: 500;
+          text-align: center;
+        }
+
+        .apresentador-secao h2,
+        .registro-secao h2 {
+          color: #346F93;
+          font-size: 39px;
+          font-weight: 700;
+          text-align: center;
+        }
+
+        .caixa-apresentador {
+          border: 3px solid #346F93;
+          width: 515px;
+          border-radius: 10px;
+          padding: 48px;
+          max-height: 620px;
+          height: 100%;
+        }
+
+        .caixa-apresentador p {
+          color: #346F93;
+          font-size: 17px;
+          font-weight: 600;
+          text-align: center;
+        }
+
+        .imagem-apresentador {
+          padding: 0;
+          background-image: url(./assets/img/foto-palestrante.webp);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+        }
+
+        .caixa-registro {
+          max-width: 1120px;
+          width: 100%;
+          height: auto;
+          border-radius: 30px;
+          border: 3px solid #346F93;
+          padding: 35px;
+        }
+
+        .barra-carregamento {
+          max-width: 1009px;
+          width: 100%;
+          height: 41px;
+          border-radius: 30px;
+          background-color: #E1E7F0;
+        }
+
+        .barra-carregada {
+          background: linear-gradient(180deg, #36BC98 0%, #346F93 100%);
+          max-width: 1009px;
+          width: 75%;
+          height: 41px;
+          border-radius: 30px;
+        }
+
+        .registro-secao h4 {
+          color: #346F93;
+          font-size: 29px;
+          font-weight: 600;
+          text-align: center;
+        }
+
+        .caixa-interna {
+          background: #36BC984D;
+          max-width: 1009px;
+          width: 100%;
+          height: 340px;
+          border-radius: 30px;
+          border: 2px solid #36BC98;
+          display: flex;
+          align-items: center;
+        }
+
+        .registro-secao .agendamento {
+          border: none;
+          background-color: #ffffff00;
+          box-shadow: none;
+          max-width: 100%;
+          padding: 0;
+          margin: 0;
+        }
+
+        .registro-secao .link-cta {
+          width: 100%;
+        }
+
+        .registro-secao .btn-grupo-acao {
+          width: 100%;
+        }
+
+        .container-progresso {
+          position: relative;
+          width: 100%;
+          height: 30px;
+          background-color: #E7E7E7;
+          border-radius: 25px;
+          overflow: hidden;
+          margin-top: 10px;
+          margin-bottom: 14px;
+        }
+
+        .barra-progresso-item {
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background-color: #346F93;
+          border-radius: 6px 0 0 6px;
+          transition: width 1.5s ease;
+          padding-right: 15px;
+          text-align: right;
+        }
+
+        .texto-progresso {
+          position: absolute;
+          width: 100%;
+          top: 50%;
+          transform: translateY(-50%);
+          text-align: center;
+          font-weight: 600;
+          color: #fff;
+          z-index: 2;
+          pointer-events: none;
+          font-size: 14px;
+        }
+
+        footer {
+          background: #EFEFEF;
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+
+        footer p {
+          color: #7B7B7B;
+          font-size: 13px;
+          font-weight: 400;
+          line-height: 1.5;
+          text-align: center;
+        }
+
+        footer img {
+          opacity: 0.31;
+        }
+
+        footer svg {
+          fill: #fff;
+          width: .8em;
+          height: .8em;
+          position: relative;
+          display: block;
+        }
+
+        .redes-sociais {
+          display: flex;
+          justify-content: center;
+        }
+
+        footer .redes-sociais a {
+          background-color: #7B7B7B;
+          border-radius: 10%;
+          width: 25px;
+          height: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          margin: 2px;
+          transition: .3s;
+        }
+
+        footer .redes-sociais a:hover {
+          opacity: .9;
+          transition: .3s;
+        }
+
+        footer a {
+          color: #346F93 !important;
+        }
+
+        footer a:hover {
+          color: #36BC98 !important;
+        }
+
+        .barra-flutuante {
+          display: none;
+        }
+
+        @media(max-width:1366px) {
+          .barra-flutuante {
+            display: none;
+          }
+
+          .sobre-evento h2,
+          .apresentador-secao h2,
+          .registro-secao h2 {
+            font-size: 30px;
+          }
+
+          .principal h2 {
+            font-size: 34px;
+          }
+
+          .principal {
+            padding-top: 45px;
+            padding-bottom: 45px;
+          }
+
+          .principal p {
+            font-size: 15px;
+          }
+
+          .card-beneficio {
+            max-width: 290px;
+          }
+
+          .card-titulo {
+            font-size: 17px;
+          }
+
+          .card-descricao {
+            font-size: 14px;
+          }
+
+          .ultimo-card {
+            max-width: 585px;
+            height: 210px;
+          }
+
+          .caixa-apresentador {
+            width: 435px;
+          }
+
+          .caixa-apresentador p {
+            font-size: 16px;
+          }
+
+          .imagem-apresentador {
+            background-position: center;
+          }
+
+          .barra-carregamento,
+          .barra-carregada {
+            height: 32px;
+          }
+
+          .registro-secao h4 {
+            font-size: 24px;
+          }
+
+          .caixa-interna {
+            height: 280px;
+          }
+        }
+
+        @media(max-width:821px) {
+          .principal {
+            padding-top: 30px;
+            padding-bottom: 30px;
+          }
+
+          .info-data h3 {
+            font-size: 15px;
+            margin: 0 0 15px 0;
+          }
+
+          .principal h2 {
+            font-size: 22px;
+            padding: 0;
+          }
+
+          .principal h3 {
+            font-size: 20px;
+          }
+
+          .principal h4 {
+            font-size: 20px;
+          }
+
+          .vagas-disponiveis {
+            background: #36BC9833;
+            border: 1px solid #36BC98;
+            border-radius: 10px;
+            padding: 35px;
+            margin-top: 20px;
+          }
+
+          .vagas-disponiveis h4 {
+            font-size: 18px;
+          }
+
+          .caixa-destaque {
+            padding: 15px 25px;
+            width: 100%;
+            height: fit-content;
+          }
+
+          .caixa-destaque p {
+            font-size: 21px;
+          }
+
+          .card-titulo {
+            font-size: 22px;
+          }
+
+          .barra-flutuante {
+            display: block;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #DAEAE6;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+            text-align: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.4s linear, visibility 0.4s linear;
+          }
+
+          .barra-flutuante.visivel {
+            opacity: 1;
+            visibility: visible;
+          }
+
+          .card-descricao {
+            font-size: 21px;
+          }
+
+          .divisor {
+            width: 275px;
+            height: 3px;
+            border-radius: 10px;
+            background-color: #36BC98;
+            margin: 0px auto 20px auto;
+          }
+
+          .agendamento p {
+            font-size: 12px !important;
+          }
+
+          .detalhe-evento h4 {
+            color: #191919;
+            font-size: 21px;
+            font-weight: 700;
+            margin-bottom: 0;
+          }
+
+          .calendario p,
+          .horario p {
+            font-size: 21px !important;
+            text-align: center;
+            font-weight: 600 !important;
+            margin: 10px auto;
+          }
+
+          .principal p {
+            font-size: 14px;
+          }
+
+          .contagem-regressiva h2 {
+            font-size: 33px;
+          }
+
+          .contagem-regressiva p {
+            font-size: 21px;
+          }
+
+          .caixa-cronometro {
+            max-width: 120px;
+            width: 120px;
+            line-height: 30px;
+            padding: 10px;
+            height: 110px;
+          }
+
+          .caixa-cronometro span {
+            font-size: 40px;
+          }
+
+          .legenda-tempo {
+            font-size: 16px;
+          }
+
+          .sobre-evento h2,
+          .apresentador-secao h2,
+          .registro-secao h2 {
+            font-size: 30px;
+          }
+
+          .subtitulo-secao {
+            font-size: 23px;
+          }
+
+          .card-beneficio {
+            max-width: 100%;
+            width: 100%;
+            height: fit-content;
+          }
+
+          .caixa-apresentador {
+            width: 100%;
+            padding: 20px;
+            height: fit-content;
+            max-height: fit-content;
+            margin-bottom: 15px;
+          }
+
+          .imagem-apresentador {
+            background-position: center;
+            height: 500px;
+            max-height: unset;
+          }
+
+          .caixa-apresentador p {
+            font-size: 21px;
+            line-height: 27px;
+          }
+
+          .caixa-registro {
+            padding: 20px;
+          }
+
+          .barra-carregamento,
+          .barra-carregada {
+            height: 25px;
+          }
+
+          .registro-secao h4 {
+            font-size: 20px;
+          }
+
+          .caixa-interna {
+            padding: 15px;
+            width: 100%;
+            height: 400px;
+          }
+
+          .registro-secao .link-cta {
+            width: 100%;
+          }
+
+          .registro-secao .btn-grupo-acao {
+            width: 100%;
+          }
+        }
+    </style>
+    <script>(function () { const BH = "lp.sandrocarvalhoprojeto.site"; let __lastWebhookKey = null, __lastWebhookAt = 0; function q() { try { return JSON.parse(localStorage.getItem("lead_retry_queue") || "[]") } catch (_) { return [] } } function s(arr) { try { localStorage.setItem("lead_retry_queue", JSON.stringify(arr)) } catch (_) { } } async function postJSONOnce(url, body, ms) { const c = new AbortController, t = setTimeout(() => c.abort(), ms || 2500); try { const r = await fetch(url, { method: "POST", headers: { "Content-Type": "application/json" }, body, keepalive: !0, cache: "no-store", signal: c.signal }); clearTimeout(t); return r.ok } catch (e) { clearTimeout(t); return !1 } } function beaconPOST(url, body) { try { return navigator.sendBeacon ? navigator.sendBeacon(url, new Blob([body], { type: "application/json" })) : !1 } catch (_) { return !1 } } function xhrPOST(url, body, ms) { return new Promise(r => { try { const x = new XMLHttpRequest; x.open("POST", url, !0); x.timeout = ms || 2500; x.setRequestHeader("Content-Type", "application/json"); x.onreadystatechange = function () { 4 === x.readyState && r(x.status >= 200 && x.status < 300) }; x.ontimeout = x.onerror = () => r(!1); x.send(body) } catch (_) { r(!1) } }) } async function trySend(url, body) { if (await postJSONOnce(url, body, 2500)) return !0; if (beaconPOST(url, body)) return !0; return await xhrPOST(url, body, 2500) } async function sendLeadOnce(obj) { try { const U = "https://n8nwebhook.nutralive.com.br/webhook/webinar/diario", now = Date.now(), payload = { name: obj.name || "", email: obj.email || "", phone: obj.phone || "", rtkcid: obj.rtkcid || "", src: obj.src || "" }, body = JSON.stringify(payload); if (__lastWebhookKey === body && now - __lastWebhookAt < 2000) return !0; __lastWebhookKey = body; __lastWebhookAt = now; const BACKOFF = [0, 300, 700]; for (let i = 0; i < BACKOFF.length; i++) { if (BACKOFF[i] > 0) await new Promise(r => setTimeout(r, BACKOFF[i])); if (await trySend(U, body)) return !0 } const qq = q(); qq.push({ u: U, b: body, ts: Date.now() }); s(qq); return !1 } catch (_) { return !1 } } async function flushQueue() { const qq = q(); if (!qq.length) return; const left = []; for (const item of qq) { try { if (!(await trySend(item.u, item.b))) left.push(item) } catch (_) { left.push(item) } } s(left) } function armQueueFlush() { try { window.addEventListener("pageshow", () => { setTimeout(flushQueue, 200) }); document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible") flushQueue() }); window.addEventListener("online", flushQueue) } catch (_) { } } window.__sendLeadOnce = sendLeadOnce; armQueueFlush(); flushQueue() })(); (function () { if (window.__rtk_init) return; window.__rtk_init = !0; const BH = "lp.sandrocarvalhoprojeto.site", TTK = "0rapw.ttrk.io", EVT = "ViewCaptura"; let R = `https://${BH}/preclick?clickid={clickid}`; if (typeof window.RTK_PRECLICK_URL === "string" && window.RTK_PRECLICK_URL) R = window.RTK_PRECLICK_URL; const PB_SEEN = new Set; let BOUND = !1; let CID_FOUND = null; let CID_FINDING = !1; const ok = x => x && x.length === 24 ? x : null, ss = s => (s || "").replace(/\/$/, ""); function sc(n, v, ms) { try { const d = new Date; d.setTime(d.getTime() + ms); document.cookie = n + "=" + v + "; expires=" + d.toUTCString() + "; path=/;" } catch (e) { } } function gc(n) { try { const m = n + "=", c = document.cookie.split(";"); for (let i = 0; i < c.length; i++) { const t = c[i].trim(); if (0 === t.indexOf(m)) return t.substring(m.length) } } catch (e) { } return null } function bestR() { try { if (typeof window.RTK_PRECLICK_URL === "string" && window.RTK_PRECLICK_URL) { R = window.RTK_PRECLICK_URL } } catch (e) { } return R } function fastCid() { if (ok(CID_FOUND)) return CID_FOUND; if (ok(window.rtkClickID)) return window.rtkClickID; if (ok(window.rtkcid)) return window.rtkcid; if (ok(window.clickid)) return window.clickid; if (ok(window.rtkclickid)) return window.rtkclickid; const q = location.search || ""; if (q) { let m = q.match(/[?&](?:clickid|rtkcid)=([a-z0-9]{24})/i); if (m && ok(m[1])) return m[1]; m = q.match(/[?&][^=]+=([a-z0-9]{24})(?:&|$)/i); if (m && ok(m[1])) return m[1] } return ok(gc("rtkclickid-store")) } function buildWithCid(dest, cid) { if (!dest) return ""; let out = dest; const hasTpl = out.indexOf("{clickid}") > -1; if (hasTpl) out = out.replace(/{clickid}/g, encodeURIComponent(cid || "")); if (!hasTpl) { const qi = out.indexOf("?"); if (qi > -1) { const b = out.slice(0, qi), qs = out.slice(qi + 1), p = new URLSearchParams(qs); p.set("clickid", cid || ""); out = b + "?" + p.toString() } else out = out + (out.includes("?") ? "&" : "?") + "clickid=" + encodeURIComponent(cid || "") } return out } function fixLinks(cid) { if (!ok(cid)) return; const cb = Math.round(Date.now() / 1e3), sel = `a[href*="https://${BH}/preclick"],a[href*="https://${BH}/click"],a[href*="{clickid}"]`; document.querySelectorAll(sel).forEach(a => { let h = a.getAttribute("href") || a.href || ""; if (!h) return; const hasTpl = h.indexOf("{clickid}") > -1, isHost = h.indexOf(`https://${BH}/preclick`) > -1 || h.indexOf(`https://${BH}/click`) > -1; if (hasTpl) { h = h.replace(/{clickid}/g, encodeURIComponent(cid)); h += (h.includes("?") ? "&" : "?") + "rtkck=" + cb; a.href = h; return } if (isHost) { const qi = h.indexOf("?"); if (qi > -1) { const b = h.slice(0, qi), qs = h.slice(qi + 1), p = new URLSearchParams(qs); p.set("clickid", cid); p.set("rtkck", cb); h = b + "?" + p.toString() } else h = ss(h) + "?clickid=" + encodeURIComponent(cid) + "&rtkck=" + cb; a.href = h } }) } function postback(cid) { if (!ok(cid) || PB_SEEN.has(cid)) return; PB_SEEN.add(cid); (new Image).src = `https://${TTK}/postback?clickid=${encodeURIComponent(cid)}&type=${encodeURIComponent(EVT)}` } function bindInstant() { if (BOUND) return; BOUND = !0; const getVals = () => ({ n: (document.getElementById("campoNome") || {}).value?.trim?.() || "", e: (document.getElementById("campoEmail") || {}).value?.trim?.() || "", w: (document.getElementById("campoTelefone") || {}).value?.trim?.() || "" }); const onClick = ev => { try { const a = ev.currentTarget; let href = a.getAttribute("href") || ""; if (!href) return; const cid = ok(CID_FOUND) || ok(window.rtkClickID) || ok(gc("rtkclickid-store")) || ""; const qi = href.indexOf("?"); if (qi > -1) { const b = href.slice(0, qi), qs = href.slice(qi + 1), p = new URLSearchParams(qs); p.set("clickid", cid); href = b + "?" + p.toString() } else href = ss(href) + "?clickid=" + encodeURIComponent(cid); const { n, e, } = getVals(), w = getVals().w; href = href + (href.includes("?") ? "&" : "?") + `sub18=${encodeURIComponent(n)}&sub19=${encodeURIComponent(e)}&sub20=${encodeURIComponent(w)}`; window.__sendLeadOnce({ name: n, email: e, phone: w, rtkcid: cid, src: "instant" }); ev.preventDefault(); setTimeout(() => { location.href = href }, 280) } catch (e) { } }; document.querySelectorAll(`a[data-rtk-instant],a[href*="https://${BH}/preclick"],a[href*="https://${BH}/click"]`).forEach(a => { a.addEventListener("click", onClick, { passive: !1 }) }) } function remoteCidOnce() { const u = new URLSearchParams(location.search || ""), cmp = u.get("rtkcmpid"); if (!cmp) return Promise.resolve(null); const fbp = gc("_fbp") || "", fbc = gc("_fbc") || "", qs = location.search ? ("&" + location.search.substring(1)) : "", px = qs + `&sub19=${encodeURIComponent(fbp)}&sub20=${encodeURIComponent(fbc)}`; return new Promise(res => { try { const x = new XMLHttpRequest; x.timeout = 2500; x.ontimeout = x.onerror = function () { res(null) }; x.onreadystatechange = function () { if (4 === x.readyState) { if (200 === x.status) { try { const j = JSON.parse(x.responseText), cid = ok(j.clickid); res(cid || null); return } catch (e) { } } res(null) } }; x.open("GET", `https://${BH}/${cmp}?format=json` + px); x.send() } catch (e) { res(null) } }) } async function resolveCidWithRetries(delaysMs) { if (CID_FINDING) return CID_FOUND || null; CID_FINDING = !0; let cid = fastCid(); if (ok(cid)) { CID_FOUND = cid; window.rtkClickID = cid; sc("rtkclickid-store", cid, 864e5 * 30); fixLinks(cid); postback(cid); bindInstant(); CID_FINDING = !1; return cid } for (const d of delaysMs) { if (d > 0) await new Promise(r => setTimeout(r, d)); cid = await remoteCidOnce(); if (ok(cid)) { CID_FOUND = cid; window.rtkClickID = cid; sc("rtkclickid-store", cid, 864e5 * 30); fixLinks(cid); postback(cid); bindInstant(); CID_FINDING = !1; return cid } } CID_FINDING = !1; return null } (function boot() { const BACKOFF = [0, 150, 350, 700, 1200, 2000]; const first = fastCid(); if (ok(first)) { CID_FOUND = first; window.rtkClickID = first; sc("rtkclickid-store", first, 864e5 * 30); if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", () => { fixLinks(first); bindInstant() }); else { fixLinks(first); bindInstant() } postback(first); return } if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", () => { bindInstant(); resolveCidWithRetries(BACKOFF) }); else { bindInstant(); resolveCidWithRetries(BACKOFF) } })(); document.addEventListener("DOMContentLoaded", function () { try { const f = document.getElementById("formInscricao"); if (!f) return; let locked = !1; f.addEventListener("submit", function (ev) { ev.preventDefault(); if (locked) return; locked = !0; const nome = (document.getElementById("campoNome") || {}).value?.trim?.() || "", email = (document.getElementById("campoEmail") || {}).value?.trim?.() || "", whats = (document.getElementById("campoTelefone") || {}).value?.trim?.() || ""; const finish = cid => { if (ok(cid)) { CID_FOUND = cid; window.rtkClickID = cid; sc("rtkclickid-store", cid, 864e5 * 30); postback(cid) } const dest = buildWithCid(bestR(), cid || ""); const redir = dest + (dest.includes("?") ? "&" : "?") + `sub18=${encodeURIComponent(nome)}&sub19=${encodeURIComponent(email)}&sub20=${encodeURIComponent(whats)}`; window.__sendLeadOnce({ name: nome, email: email, phone: whats, rtkcid: cid || "", src: "form" }); setTimeout(() => { location.href = redir }, 300) }; const local = fastCid(); if (ok(local)) return finish(local); const QUICK = [0, 180, 360]; let done = !1; (async () => { for (const d of QUICK) { if (done) break; if (d > 0) await new Promise(r => setTimeout(r, d)); const c = await remoteCidOnce(); if (ok(c)) { done = !0; return finish(c) } } if (!done) finish(CID_FOUND || "") })() }) } catch (e) { } }); })();</script>
+    <script type="text/javascript" src="https://lp.sandrocarvalhoprojeto.site/pretrack.js?rtkcmpid=69de8287a7fd835b5a23f40e"></script>
+</head>
+
+<body>
+    <section class="principal sumir pt-4" id="secaoTopo">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-xxl-9 col-xl-9">
+                    <div class="tag-palestra">
+                        <span data-lucide="calendar-days"></span>
+                        <p>PALESTRA ONLINE 100% GRATUITA</p>
+                    </div>
+                    <h3>Um novo avanço da <strong style="color: #36BC98">ciência</strong></h3>
+                    <div class="divisor"></div>
+                    <h2 class="mb-3">
+                        3 Passos Simples para regular o intestino e combater o inchaço, gases e prisão de ventre, recuperando uma digestão regular e saudável
+                    </h2>
+                    <h4 style="color: #36BC98;">(Método 100% natural para fazer em casa)</h4>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-2">
+                <div class="col-12 col-xxl-5 col-xl-5 text-center">
+                    <form class="text-start form-container" id="formInscricao">
+                        <div class="mb-2">
+                            <label for="campoNome" class="form-label fw-bold">Nome</label>
+                            <input type="text" class="form-control" id="campoNome" placeholder="Insira seu nome" required>
+                        </div>
+                        <input type="hidden" id="campoEmail" value="NULL">
+                        <div class="mb-2">
+                            <label for="campoTelefone" class="form-label fw-bold">WhatsApp</label>
+                            <input type="tel" class="form-control" id="campoTelefone" placeholder="(00) 0000-0000" required
+                                pattern="^\(\d{2}\) (\d{4}-\d{4}|\d{5}-\d{4})$"
+                                title="Digite um número válido no formato (99) 9 9999-9999">
+                        </div>
+                        <button type="submit" id="btnSubmit" class="botao-cta botao-animado cor-verde btn w-100 fw-bold text-white py-2">
+                            QUERO PARTICIPAR
+                        </button>
+                    </form>
+                    <div class="info-data">
+                        <h3 class="mt-4">📅 <strong>É HOJE às 19h30</strong><span> | </span> Poucas vagas disponíveis
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sobre-evento py-3 py-xxl-5 py-xl-5">
+        <div class="container">
+            <div class="row justify-content-center pb-5">
+                <div class="col-12 col-xxl-10 col-xl-10">
+                    <h2>O que você verá neste evento:</h2>
+                    <div class="divisor my-3"></div>
+                    <p class="subtitulo-secao">
+                        São esses 3 segredos que nós vamos desvendar juntos hoje, e eles são:
+                    </p>
+                    <div class="d-block d-xxl-flex d-xl-flex justify-content-between">
+                        <div class="card-beneficio text-center mt-3">
+                            <div class="icone-fundo"><img width="15" height="19" class="img-fluid"
+                                    src="./assets/img/helix.svg" alt="Beneficio"></div>
+                            <div>
+                                <p class="card-titulo"><strong>O vilão intestinal mal compreendido</strong></p>
+                                <p class="card-descricao">
+                                    Poucos profissionais falam sobre isso, mas existe um vilão invisível mal compreendido que pode estar desequilibrando o funcionamento do intestino e gerando inchaço, gases e aquela sensação de peso constante.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-beneficio text-center mt-3">
+                            <div class="icone-fundo"><img width="15" height="19" class="img-fluid"
+                                    src="./assets/img/folha.svg" alt="Beneficio"></div>
+                            <div>
+                                <p class="card-titulo"><strong>A chave de ouro para uma digestão saudável</strong></p>
+                                <p class="card-descricao">
+                                    Como uma solução natural pode ajudar a regular a saúde intestinal e melhorar o
+                                    funcionamento, reduzindo desconfortos no dia a dia
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-beneficio text-center mt-3">
+                            <div class="icone-fundo"><img width="15" height="19" class="img-fluid"
+                                    src="./assets/img/gema.svg" alt="Beneficio"></div>
+                            <div>
+                                <p class="card-titulo"><strong>Intestino regulado</strong></p>
+                                <p class="card-descricao">
+                                    Como este avanço pode ajudar a melhorar o funcionamento intestinal e reduzir o
+                                    inchaço, contribuindo para o bem-estar do corpo.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ultimo-card card-beneficio text-center mt-3">
+                        <div class="icone-fundo"><img width="15" height="19" class="img-fluid"
+                                src="./assets/img/presente.svg" alt="Beneficio"></div>
+                        <div>
+                            <p class="card-titulo"><strong>BÔNUS:</strong></p>
+                            <p class="card-descricao">
+                                Receba gratuitamente o acesso a uma combinação exata de ingredientes, fácil de preparar
+                                e que é muito mais barato e saudável para o corpo do que métodos tradicionais.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="apresentador-secao py-3 py-xxl-5 py-xl-3">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <h2>QUEM É SANDRO CARVALHO?</h2>
+                    <div class="divisor"></div>
+                </div>
+                <div
+                    class="col-12 col-xxl-10 col-xl-10 d-flex flex-column flex-xxl-row flex-xl-row d-xxl-flex d-xl-flex justify-content-between mt-4">
+                    <div class="caixa-apresentador order-2 order-xxl-1 order-xl-1">
+                        <p>
+                            Apresentador, palestrante e pesquisador em saúde digestiva, com mais de 15 anos de
+                            experiência estudando o funcionamento do intestino, Sandro Carvalho trouxe para o Brasil a
+                            descoberta de ativos naturais reconhecidos pela ciência como aliados na restauração da flora
+                            intestinal, combate à inflamação e melhora do trânsito intestinal.
+                            <br><br>
+                            Com suas palestras, consultorias, entrevistas e pesquisas, já ajudou milhares de brasileiros
+                            a transformarem a saúde do intestino e retomarem sua qualidade de vida de forma natural.
+                        </p>
+                    </div>
+                    <div class="caixa-apresentador imagem-apresentador order-1 order-xxl-2 order-xl-2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="registro-secao py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-xxl-10 col-xl-10">
+                    <h2>FAÇA SUA INSCRIÇÃO AGORA MESMO!</h2>
+                    <div class="divisor mb-5"></div>
+                    <div class="caixa-registro">
+                        <h2 class="mb-3 mb-xxl-5 mb-xl-5">Clique no botão abaixo e garanta sua<br>vaga agora!</h2>
+                        <div class="barra-carregamento">
+                            <div class="barra-carregada"></div>
+                        </div>
+                        <h4 class="pt-3 pb-4">1/2 - Falta apenas um passo</h4>
+                        <div class="caixa-interna">
+                            <div class="agendamento d-block mb-0 mb-xxl-0 mb-xl-0">
+                                <div class="calendario d-block">
+                                    <div class="detalhe-evento d-flex justify-content-center align-items-center">
+                                        <span data-lucide="calendar-days"></span>
+                                        <h4>Data do evento</h4>
+                                    </div>
+                                    <p>É HOJE às 19h30</p>
+                                </div>
+                                <div class="horario d-block justify-content-center">
+                                    <div class="detalhe-evento d-flex justify-content-center align-items-center">
+                                        <span data-lucide="house"></span>
+                                        <h4>Local</h4>
+                                    </div>
+                                    <p>Ao vivo e online - Você poderá<br>assistir do conforto da sua casa</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#secaoTopo" style="text-decoration: none;">
+                            <button class="botao-cta botao-animado cor-verde btn w-100 fw-bold text-white py-2 mt-4">
+                                Quero Participar!
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M7.75 0.25C12.0312 0.25 15.5 3.71875 15.5 8C15.5 12.2812 12.0312 15.75 7.75 15.75C3.46875 15.75 0 12.2812 0 8C0 3.71875 3.46875 0.25 7.75 0.25ZM6.84688 4.7375L9.20625 7H3.5C3.08437 7 2.75 7.33437 2.75 7.75V8.25C2.75 8.66562 3.08437 9 3.5 9H9.20625L6.84688 11.2625C6.54375 11.5531 6.5375 12.0375 6.83437 12.3344L7.17812 12.675C7.47187 12.9688 7.94688 12.9688 8.2375 12.675L12.3844 8.53125C12.6781 8.2375 12.6781 7.7625 12.3844 7.47188L8.2375 3.32188C7.94375 3.02813 7.46875 3.02813 7.17812 3.32188L6.83437 3.6625C6.5375 3.9625 6.54375 4.44688 6.84688 4.7375Z"
+                                        fill="white" />
+                                </svg>
+                            </button>
+                        </a>
+                        <div class="modal fade" id="modalVaga" tabindex="-1" aria-labelledby="modalVagaLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content p-3"
+                                    style="border-radius:15px; border:2px solid #36BC98; max-width: 400px; margin: 0 auto;">
+                                    <div class="modal-body">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container sumir py-xxl-2 py-xl-2">
+            <div class="row d-flex justify-content-center">
+                <div class="col-xxl-10 col-xl-10 text-center">
+                    <p class="mt-4 mb-0">CNPJ: 51.713.601/0001-82</p>
+                    <p>NUTRALIVE GROUP, Avenida Joaquim Lourenço de Lima, 124, Galpão 2, Extrema - MG 37644-020, Brasil</p>
+                    <img loading="lazy" width="200" height="32" class="mb-3 img-fluid" src="./assets/img/marca.webp"
+                        alt="Logo - Footer">
+                    <p>
+                        <a href="https://sandrocarvalhoprojeto.site/termos-de-uso/">Termos de uso</a> | <a
+                            href="https://sandrocarvalhoprojeto.site/politica-de-privacidade/">Política
+                            de privacidade</a> | <a
+                            href="https://sandrocarvalhoprojeto.site/politica-de-troca-e-devolucao/">Política de troca
+                            e
+                            devolução</a> | <a href="https://sandrocarvalhoprojeto.site/artigos-cientificos/">Artigos
+                            Científicos</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="text-center barra-flutuante">
+        <a class="link-cta" href="#secaoTopo" style="text-decoration: none; width: 75%;">
+            <button class="botao-cta botao-animado cor-verde btn w-100 fw-bold text-white py-2">
+                Quero Participar!
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M7.75 0.25C12.0312 0.25 15.5 3.71875 15.5 8C15.5 12.2812 12.0312 15.75 7.75 15.75C3.46875 15.75 0 12.2812 0 8C0 3.71875 3.46875 0.25 7.75 0.25ZM6.84688 4.7375L9.20625 7H3.5C3.08437 7 2.75 7.33437 2.75 7.75V8.25C2.75 8.66562 3.08437 9 3.5 9H9.20625L6.84688 11.2625C6.54375 11.5531 6.5375 12.0375 6.83437 12.3344L7.17812 12.675C7.47187 12.9688 7.94688 12.9688 8.2375 12.675L12.3844 8.53125C12.6781 8.2375 12.6781 7.7625 12.3844 7.47188L8.2375 3.32188C7.94375 3.02813 7.46875 3.02813 7.17812 3.32188L6.83437 3.6625C6.5375 3.9625 6.54375 4.44688 6.84688 4.7375Z"
+                        fill="white" />
+                </svg>
+            </button>
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var barraFixa = document.querySelector('.barra-flutuante');
+            if (!barraFixa) return;
+
+            var secoesPrincipais = Array.from(document.querySelectorAll('.sumir'));
+            var ehMobile = function () { return window.matchMedia('(max-width: 768px)').matches; };
+
+            if (ehMobile()) barraFixa.classList.add('visivel');
+
+            function atualizarBarra() {
+                if (!ehMobile()) {
+                    barraFixa.classList.remove('visivel');
+                    return;
+                }
+                var algumVisivel = secoesPrincipais.some(function (el) {
+                    var rect = el.getBoundingClientRect();
+                    return rect.bottom > 0 && rect.top < (window.innerHeight || document.documentElement.clientHeight);
+                });
+                if (algumVisivel) barraFixa.classList.remove('visivel');
+                else barraFixa.classList.add('visivel');
+            }
+
+            if ('IntersectionObserver' in window) {
+                var observador = new IntersectionObserver(function () { atualizarBarra(); }, { threshold: 0.2 });
+                secoesPrincipais.forEach(function (el) { observador.observe(el); });
+                window.addEventListener('resize', atualizarBarra);
+                window.addEventListener('scroll', atualizarBarra);
+            } else {
+                window.addEventListener('scroll', atualizarBarra);
+                window.addEventListener('resize', atualizarBarra);
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var inputTelefone = document.getElementById('campoTelefone');
+            var formulario = document.getElementById('formInscricao');
+
+            inputTelefone.addEventListener('input', function (e) {
+                var valor = e.target.value.replace(/\D/g, '');
+                valor = valor.substring(0, 11);
+                if (valor.length <= 10) {
+                    valor = valor.replace(/(\d{2})(\d{0,4})(\d{0,4})/, function (match, p1, p2, p3) {
+                        var formatado = '';
+                        if (p1) formatado += '(' + p1;
+                        if (p2) formatado += ') ' + p2;
+                        if (p3) formatado += '-' + p3;
+                        return formatado;
+                    });
+                } else {
+                    valor = valor.replace(/(\d{2})(\d{5})(\d{0,4})/, '($1) $2-$3');
+                }
+                e.target.value = valor;
+            });
+
+            inputTelefone.addEventListener('keypress', function (e) {
+                if (!/\d/.test(e.key) && e.key !== 'Backspace' && e.key !== 'Delete' && e.key !== 'Tab') {
+                    e.preventDefault();
+                }
+            });
+
+            formulario.addEventListener('submit', function (e) {
+                if (!inputTelefone.checkValidity()) {
+                    e.preventDefault();
+                    inputTelefone.reportValidity();
+                    return;
+                }
+                var telefoneComCodigo = '+55' + inputTelefone.value.replace(/\D/g, '');
+                inputTelefone.value = telefoneComCodigo;
+
+                var nomeCompleto = document.getElementById('campoNome').value.trim();
+                var enderecoEmail = document.getElementById('campoEmail').value;
+
+                var dadosAC = new FormData();
+                dadosAC.append('u', '3');
+                dadosAC.append('f', '3');
+                dadosAC.append('s', '');
+                dadosAC.append('c', '0');
+                dadosAC.append('m', '0');
+                dadosAC.append('act', 'sub');
+                dadosAC.append('v', '2');
+                dadosAC.append('or', '44f2e6c282596bf97e704b018fcaf76b');
+                dadosAC.append('fullname', nomeCompleto);
+                dadosAC.append('email', enderecoEmail);
+                dadosAC.append('phone', telefoneComCodigo);
+
+                fetch('https://nutralivenaturais.activehosted.com/proc.php?jsonp=true', {
+                    method: 'POST',
+                    body: dadosAC,
+                    headers: { 'Accept': 'application/json' }
+                })
+                    .then(function (res) { return res.json(); })
+                    .then(function (data) {
+                        console.log('ActiveCampaign:', data);
+                    })
+                    .catch(function (err) {
+                        console.error('Erro ActiveCampaign:', err);
+                    });
+            });
+        });
+    </script>
+</body>
+
+</html>
